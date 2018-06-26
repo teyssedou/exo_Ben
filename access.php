@@ -31,7 +31,7 @@ if (isset($_POST['modifi'])) {
     $modele1 = $_POST['modeleModif'];
     $puissance1 = intval($_POST['puissanceModif']);
     $poids1 = intval($_POST['poidsModif']);
-    $image1 = $_POST['imageModif'];
+    // $image1 = $_POST['imageModif'];
     $vitesse1 = intval($_POST['vitesseModif']);
     $acceleration1 = floatval($_POST['accelerationModif']);
     $conso1 = floatval($_POST['consommationModif']);

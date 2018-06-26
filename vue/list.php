@@ -4,7 +4,30 @@ require_once 'voiture.php';
 
 $resultat = Voiture::affiche();
 ?>
-<table class="uk-table uk-table-hover uk-table-divider">
+   <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+      
+    <?php
+foreach ($resultat as $donnee) {
+    echo '<div>
+        <div class="uk-card uk-card-default uk-card-hover uk-card-body">   
+    <h3 class="uk-card-title"><img class="uk-border-circle" width="150" height="150" src="'.$donnee['image'].'">'.$donnee['marquenom'].' '.$donnee['modele'].'</h3>';
+
+    echo '<p uk-margin>
+            <a href="vue/technique.php?afficher='.$donnee['idvoiture'].'" uk-icon="settings" name="technique"></a>
+            <a class="uk-button uk-button-secondary" href="modif.php?modifier='.$donnee['idvoiture'].'">Modifier</a>
+            <a class="uk-button uk-button-danger" href="access.php?supprimer='.$donnee['idvoiture'].'">Supprimer</a>
+            </p>
+            </div>
+    </div>';
+}
+        ?>
+         
+         </div>
+
+
+
+
+<!-- <table class="uk-table uk-table-hover uk-table-divider">
     <thead>
         <tr>
             <th>Marque</th>
@@ -13,29 +36,16 @@ $resultat = Voiture::affiche();
             <th>Actions</th>
         </tr>
     </thead>
-    <tbody>
-      <?php
-foreach ($resultat as $donnee) {
-    echo '<tr id="'.$donnee['idvoiture'].'">';
-    echo '<td>'.$donnee['marquenom'].'</td>';
-    echo '<td>'.$donnee['modele'].'</td>';
-    echo '<td>'.$donnee['nomtype'].'</td>';
-    echo '<td><p uk-margin>
-    <a href="vue/technique.php?afficher='.$donnee['idvoiture'].'" uk-icon="settings" name="technique"></a> 
-    <a class="uk-button uk-button-secondary" href="modif.php?modifier='.$donnee['idvoiture'].'">Modifier</a>
-    <a class="uk-button uk-button-danger" href="access.php?supprimer='.$donnee['idvoiture'].'">Supprimer</a>
-    </p></td>';
-    echo '</tr>';
-
-    // echo "<div id='".$donnee['idvoiture']."'>";
-    // echo 'La voiture de modele <b>'.$donnee['modele'].' </b>a pour marque '.$donnee['marquenom'].' et est de type '.$donnee['nomtype'].'<br />';
-    // echo 'Elle a une puissance de '.$donnee['puissance'].' CV!<br />';
-    // echo 'Son poids est de '.$donnee['poids'].' kg pour une vitesse max de '.$donnee['vitesse_max'].' km/h.<br />';
-    // echo 'La voiture passe de 0 à 100km/h en '.$donnee['acceleration'].' secondes.<br />';
-    // echo 'Elle consomme '.$donnee['consommation'].' l/100<br />';
-    // echo '<a href="access.php?supprimer='.$donnee['idvoiture'].'">Supprimer</a>';
-    // echo '</div><br />';
-}
-?>
-  </tbody>
-</table>
+    <tbody> -->
+     <!-- echo '<tr id="'.$donnee['idvoiture'].'">';
+     echo '<td>'.$donnee['marquenom'].'</td>';
+     echo '<td>'.$donnee['modele'].'</td>';
+     echo '<td>'.$donnee['nomtype'].'</td>';
+     echo '<td><p uk-margin>
+     <a href="vue/technique.php?afficher='.$donnee['idvoiture'].'" uk-icon="settings" name="technique"></a>
+     <a class="uk-button uk-button-secondary" href="modif.php?modifier='.$donnee['idvoiture'].'">Modifier</a>
+     <a class="uk-button uk-button-danger" href="access.php?supprimer='.$donnee['idvoiture'].'">Supprimer</a>
+     </p></td>';
+     echo '</tr>'; -->
+          <!-- </tbody>
+</table> -->
