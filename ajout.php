@@ -5,7 +5,7 @@ require 'component/header.php';
 ?> 
 <a class="uk-button uk-button-default" href="index.php">Accueil</a>
 
-<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+<div class="uk-child-width-1-2@s uk-grid-match ajout" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
   

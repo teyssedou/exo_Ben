@@ -4,7 +4,7 @@ require_once 'voiture.php';
 
 $resultat = Voiture::affiche();
 ?>
-   <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+   <div class="uk-child-width-1-3@s uk-grid-match" uk-grid>
       
     <?php
 foreach ($resultat as $donnee) {

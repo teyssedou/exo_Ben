@@ -3,3 +3,10 @@
 #h2Index {
     text-align: center;
 }
+
+/* ajout.php */
+
+.uk-grid-match.ajout {
+    display: flex;
+    margin: 2% auto;
+}
