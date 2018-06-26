@@ -34,6 +34,7 @@ if (isset($_GET['afficher'])) {
         echo '<li>Vitesse Max.: '.$donnee['vitesse_max'].' km/h</li>';
         echo '<li>Accélération: '.$donnee['acceleration'].' secondes</li>';
         echo '<li>Consommation: '.$donnee['consommation'].' litres/100</li>';
+        echo '<li>Dates: '.$donnee['dates'].'</li>';
         echo '</ul>';
         echo '</div>
              <div class="uk-card-footer">

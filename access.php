@@ -1,7 +1,6 @@
 <?php
 
 require_once 'voiture.php';
-require_once 'component/header.php';
 
 if (isset($_POST['ajouter'])) {
     $modele = $_POST['modele'];
@@ -13,8 +12,9 @@ if (isset($_POST['ajouter'])) {
     $conso = $_POST['conso'];
     $marque = $_POST['marque'];
     $type = $_POST['type'];
+    $dates = $_POST['dates'];
 
-    Voiture::ajout($modele, $puissance, $poids, $image, $vitesse, $acceleration, $conso, $marque, $type);
+    Voiture::ajout($modele, $puissance, $poids, $image, $vitesse, $acceleration, $conso, $marque, $type, $dates);
     echo "L'ajout a été effectué!";
     header('Refresh: 2; url=../index.php');
 }
@@ -35,8 +35,9 @@ if (isset($_POST['modifi'])) {
     $vitesse1 = intval($_POST['vitesseModif']);
     $acceleration1 = floatval($_POST['accelerationModif']);
     $conso1 = floatval($_POST['consommationModif']);
+    $dates = $_POST['dates'];
 
-    Voiture::modif($modele1, $puissance1, $poids1, $vitesse1, $acceleration1, $conso1, $modifi);
+    Voiture::modif($modele1, $puissance1, $poids1, $vitesse1, $acceleration1, $conso1, $dates, $modifi);
     echo 'Modification effectuée!';
     header('Refresh: 1; url=../index.php');
 }

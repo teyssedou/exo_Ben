@@ -34,8 +34,19 @@ if (isset($_GET['modifier'])) {
         echo '<div class="uk-margin">
                 <input class="uk-input" type="text" name="consommationModif" value="'.$donnee['consommation'].'">
               </div>';
+        echo '<div class="uk-margin">
+                <input class="uk-input" type="date" name="dates" value="'.$donnee['dates'].'">
+              </div>';
         echo '<button value="'.$modifier.'" type="submit" name="modifi">Modifier</button>';
+        echo '</div>
+             <div class="uk-card-footer">
+               <a href="../index.php" uk-icon="home" name="accueil"></a>
+            </div>
+            </div>';
         echo '</fieldset>
 </form>';
     }
 }
+
+require_once 'component/footer.php';
+?>

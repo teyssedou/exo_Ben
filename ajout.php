@@ -72,7 +72,11 @@ require 'connexion.php';
         ?>
             </select>
         </div>
-        
+
+        <div class="uk-margin">
+            <input class="uk-input" type="datetime" name="dates" placeholder="dates">
+        </div>
+               
         <button type="submit" name="ajouter">Ajouter</button>
     
     </fieldset>
