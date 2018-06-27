@@ -1,15 +1,15 @@
 <?php
-require 'connexion.php';
-require 'component/header.php';
+require '../class/connexion.php';
+require '../component/header.php';
 
 ?> 
-<a class="uk-button uk-button-default" href="index.php">Accueil</a>
+<a class="uk-button uk-button-default" href="../index.php">Accueil</a>
 
 <div class="uk-child-width-1-2@s uk-grid-match ajout" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
   
-<form class="uk-grid-small" uk-grid>
+<form class="uk-grid-small" uk-grid action="access.php" method="post">
     <div class="uk-width-1-1">
         <input class="uk-input" type="text" name="modele" placeholder="Nom du Modèle">
     </div>
@@ -64,7 +64,7 @@ require 'component/header.php';
  </div>
     </div>
 <?php
-require 'component/footer.php';
+require '../component/footer.php';
 ?>
 </body>
 </html>

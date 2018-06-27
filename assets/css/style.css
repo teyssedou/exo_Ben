@@ -4,9 +4,18 @@
     text-align: center;
 }
 
-/* ajout.php */
-
-.uk-grid-match.ajout {
-    display: flex;
-    margin: 2% auto;
+.carte {
+    text-align: center;
+    padding: 50px auto;
+    height: 250px;
 }
+
+.uk-border-circle {
+    height: 30vh;
+}
+
+.nomVoiture {
+    margin: 0;
+}
+
+/* ajout.php */

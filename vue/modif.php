@@ -1,7 +1,7 @@
 <?php
 
-require_once 'component/header.php';
-require_once 'voiture.php';
+require_once '../component/header.php';
+require_once '../class/voiture.php';
 
 ?>
 <h2>Modification</h2>
@@ -48,5 +48,5 @@ if (isset($_GET['modifier'])) {
     }
 }
 
-require_once 'component/footer.php';
+require_once '../component/footer.php';
 ?>

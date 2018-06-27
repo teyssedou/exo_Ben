@@ -1,6 +1,6 @@
 <?php
 
-require_once 'voiture.php';
+require_once '../class/voiture.php';
 
 if (isset($_POST['ajouter'])) {
     $modele = $_POST['modele'];
