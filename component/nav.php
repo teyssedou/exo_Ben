@@ -1,3 +1,7 @@
+<?php
+require_once '/component/header.php';
+?>
+  
   <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
 
