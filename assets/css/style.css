@@ -1,6 +1,6 @@
-/* CSS index.php */
+/* CSS list.php */
 
-#h2Index {
+h2 {
     text-align: center;
 }
 
@@ -11,11 +11,9 @@
 }
 
 .uk-border-circle {
-    height: 30vh;
+    height: 20vh;
 }
 
 .nomVoiture {
     margin: 0;
 }
-
-/* ajout.php */

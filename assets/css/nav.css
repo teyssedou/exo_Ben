@@ -1,0 +1,9 @@
+.uk-navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.uk-navbar-center {
+    background-color: rgba(163, 154, 154, 0.753);
+}

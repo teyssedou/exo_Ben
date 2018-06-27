@@ -14,7 +14,7 @@ foreach ($resultat as $donnee) {
         <div class="uk-card-title"><img class="uk-border-circle" src="'.$donnee['image'].'"><h3 class="nomVoiture">'.$donnee['marquenom'].' '.$donnee['modele'].'</h3></div>';
 
     echo '<div class="uk-inline">
-            <a uk-icon="settings" title="Fiche Technique" name="technique"></a>
+            <a uk-icon="settings" ratio="2" title="Fiche Technique" name="technique"></a>
             <div uk-dropdown="mode: click">';
 
     echo '<h2>Fiche Technique:  </h2>
@@ -31,8 +31,8 @@ foreach ($resultat as $donnee) {
         </ul>';
 
     echo '</div>
-        <a uk-icon="file-edit" href="/vue/modif.php?modifier='.$donnee['idvoiture'].'" title="Modifier"></a>
-        <a class="uk-icon-link" uk-icon="trash" href="/vue/access.php?supprimer='.$donnee['idvoiture'].'" title="Supprimer"></a>
+        <a uk-icon="file-edit" ratio="2" href="/vue/modif.php?modifier='.$donnee['idvoiture'].'" title="Modifier"></a>
+        <a class="uk-icon-link" ratio="2" uk-icon="trash" href="/vue/access.php?supprimer='.$donnee['idvoiture'].'" title="Supprimer"></a>
      
         </div>
         </div></div>

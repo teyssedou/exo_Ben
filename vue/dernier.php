@@ -1,4 +1,4 @@
-<h2>Derniers Ajouts</h2>
+
 <?php
 
 require_once '../component/header.php';
@@ -7,23 +7,43 @@ require_once '../component/nav.php';
 
 $resultat = Voiture::vueDernier();
 ?>
- <ul uk-accordion>
-        
-      <?php
+<h2>Derniers Ajouts</h2>
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+          
+    <?php
 foreach ($resultat as $donnee) {
-    echo '<li>
-   
-    <a class="uk-accordion-title" href="#"> <img class="uk-border-circle" width="150" height="150" src="'.$donnee['image'].'"> '.$donnee['marquenom'].' '.$donnee['modele'].'</a>
-                <div class="uk-accordion-content">';
-    echo '<p uk-margin>
-            <a href="/vue/technique.php?afficher='.$donnee['idvoiture'].'" uk-icon="settings" name="technique"></a>
-            <a class="uk-button uk-button-secondary" href="/vue/modif.php?modifier='.$donnee['idvoiture'].'">Modifier</a>
-            <a class="uk-button uk-button-danger" href="/vue/access.php?supprimer='.$donnee['idvoiture'].'">Supprimer</a>
-            </p>';
-    echo '</div></li>';
+    echo '
+      <div> 
+    <div class="uk-card uk-card-default uk-card-hover uk-card-body carte">
+        <div class="uk-card-title"><img class="uk-border-circle" src="'.$donnee['image'].'"><h3 class="nomVoiture">'.$donnee['marquenom'].' '.$donnee['modele'].'</h3></div>';
+
+    echo '<div class="uk-inline">
+            <a uk-icon="settings" ratio="2" title="Fiche Technique" name="technique"></a>
+            <div uk-dropdown="mode: click">';
+
+    echo '<h2>Fiche Technique:  </h2>
+        <ul class="uk-list uk-list-divider" id="'.$donnee['idvoiture'].'">
+            <li><b><u>Modele:</u></b> '.$donnee['modele'].'</li>
+            <li><b><u>Marque:</u></b> '.$donnee['marquenom'].'</li>
+            <li><b><u>Type:</u></b> '.$donnee['nomtype'].'</li>
+            <li><b><u>Puissance:</u></b> '.$donnee['puissance'].' CV</li>
+            <li><b><u>Poids:</u></b> '.$donnee['poids'].' KG</li>
+            <li><b><u>Vitesse Max.:</u></b> '.$donnee['vitesse_max'].' km/h</li>
+            <li><b><u>Accélération:</u></b> '.$donnee['acceleration'].' secondes</li>
+            <li><b><u>Consommation:</u></b> '.$donnee['consommation'].' litres/100</li>
+            <li><b><u>Dates:</u></b> '.$donnee['dates'].'</li>
+        </ul>';
+
+    echo '</div>
+        <a uk-icon="file-edit" ratio="2" href="/vue/modif.php?modifier='.$donnee['idvoiture'].'" title="Modifier"></a>
+        <a class="uk-icon-link" ratio="2" uk-icon="trash" href="/vue/access.php?supprimer='.$donnee['idvoiture'].'" title="Supprimer"></a>
+     
+        </div>
+        </div></div>
+         ';
 }
+
 require_once '../component/footer.php';
 ?>
-       
-        </ul>
+       </div>
 </body>
